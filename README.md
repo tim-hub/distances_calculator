@@ -64,5 +64,4 @@ this can be used to calculate route distance.
 ## API
 - extract_coordinate 
 - get_distance
-- main_cmd
 - write_into
