@@ -14,9 +14,9 @@ def get_distance(addr1, addr2):
     from math import sin, cos, sqrt, atan2, radians
 
     coord1= extract_coordinate(addr1)
-    print(coord1)
+    print(addr1 +"'s location: " + str(coord1))
     coord2 = extract_coordinate(addr2)
-    print(coord2)
+    print(addr2 +"'s location: " + str(coord2))
 
     # approximate radius of earth in km
     R = 6373.0
@@ -33,17 +33,17 @@ def get_distance(addr1, addr2):
 
     distance = R * c
 
-    print("Result:", distance)
+    # print("Result:", distance)
     # print("Should be:", 278.546, "km")
     return distance
 
 def main_cmd():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("address1", help="address 1")
-    parser.add_argument("address2", help="address 2")
+    parser.add_argument("address1", help="address 1, like '125 Queen St, Auckland, 0620' ")
+    parser.add_argument("address2", help="address 2, like '127 Queen St, Auckland, 0620' ")
     args = parser.parse_args()
 
-    print(get_distance(args.address1, args.address2))
+    print("{0:.3f} km".format(get_distance(args.address1, args.address2)))
 
 
