@@ -12,14 +12,15 @@ setuptools.setup(
     description="Distances claculator based on open street map api.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/tim-hubt",
+    url="https://github.com/tim-hub/distance_calculator",
     packages=setuptools.find_packages(),
     install_requires=[
         'requests',
         'time',
         'math',
         'json',
-        'random'
+        'random',
+        'pandas'
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
