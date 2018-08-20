@@ -12,7 +12,7 @@ setuptools.setup(
     description="Distances claculator based on open street map api.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/tim-hub/distance_calculator",
+    url="https://github.com/tim-hub/calculator",
     packages=setuptools.find_packages(),
     install_requires=[
         'requests',
@@ -20,7 +20,8 @@ setuptools.setup(
         'math',
         'json',
         'random',
-        'pandas'
+        'pandas',
+        'argparse',
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -28,4 +29,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
         'Topic :: Data Mapping :: Open Street Map',
     ],
+    entry_points = {
+        'console_scripts': ['distance_calculator=calculator.command_line:main'],
+    }
 )

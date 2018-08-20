@@ -11,4 +11,3 @@ def get_coordinate(the_address):
         return requests.get(the_url+the_address+the_format).text
     else:
         return None
-

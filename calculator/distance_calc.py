@@ -1,4 +1,4 @@
-from .osm_coordinate import get_coordinate
+from osm_coordinate import get_coordinate
 
 def extract_coordinate(the_address):
     import json
@@ -36,3 +36,14 @@ def get_distance(addr1, addr2):
     print("Result:", distance)
     # print("Should be:", 278.546, "km")
     return distance
+
+def main_cmd():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("address1", help="address 1")
+    parser.add_argument("address2", help="address 2")
+    args = parser.parse_args()
+
+    print(get_distance(args.address1, args.address2))
+
+
