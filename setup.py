@@ -16,10 +16,6 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     install_requires=[
         'requests',
-        'time',
-        'math',
-        'json',
-        'random',
         'pandas',
         'argparse',
     ],
@@ -31,5 +27,7 @@ setuptools.setup(
     ],
     entry_points = {
         'console_scripts': ['distance_calculator=calculator.command_line:main'],
-    }
+    },
+    test_suite='nose.collector',
+    tests_require=['nose'],
 )
