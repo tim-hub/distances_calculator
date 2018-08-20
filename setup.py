@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="distances_calculator",
     keywords='distance distances_calculator, open street map, csv, big data',
-    version="0.0.9",
+    version="0.1.1",
     author="tim-hub",
 
     description="Calculate distances between 2 addresses, Distances Calculator is based on open street map api.",
@@ -25,7 +25,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     entry_points = {
-        'console_scripts': ['distances-calc=distances_calculator.command_line:main'],
+        'console_scripts': [
+            'distance-calc=distances_calculator.command_line:main',
+            'distances_writer=distances_calculator.command_line:csv_writer'
+        ],
     },
     test_suite='nose.collector',
     tests_require=['nose'],
