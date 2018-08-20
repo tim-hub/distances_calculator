@@ -1,4 +1,4 @@
-from osm_coordinate import get_coordinate
+from .osm_coordinate import get_coordinate
 
 def extract_coordinate(the_address):
     import json
