@@ -65,3 +65,7 @@ this can be used to calculate route distance.
 - extract_coordinate 
 - get_distance
 - write_into
+
+## Links About
+- [github public repo](https://github.com/tim-hub/distance_calculator)
+- [pypi distribution](https://pypi.org/project/distances-calculator/)
